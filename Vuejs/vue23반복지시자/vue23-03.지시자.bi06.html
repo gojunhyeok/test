@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vue Sample</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue Sample</title>
+        <!-- Latest compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- CSS import -->
+        <link rel="stylesheet" href="../css/reset.css" />
+    </head>
 
-    <!-- CSS import -->
-    <link rel="stylesheet" href="../css/reset.css">
-</head>
-
-<body>
-    <br>
-    <img src="./singerarray.png" style="padding-left: 30px;">
-    <xmp>
+    <body>
+        <br />
+        <img src="./singerarray.png" style="padding-left: 30px" />
+        <xmp>
         v-for 지시자를 사용하여 자신이 좋아하는 가수들을 출력하는 테이블을 작성하여 본다.
 
         1. Object Array 를 만들어 화면과 같이 표시되게 하시오.
@@ -45,39 +47,88 @@
             "추가" 버튼을 클릭하면 Object Array에 추가하고
             input 태그에 입력된 값을 지우시오.
     </xmp>
-    <hr>
+        <hr />
 
-    <div id="app" class="col-md-10 offset-md-1">
+        <div id="app" class="col-md-10 offset-md-1">
+            <button v-on:click="btnAddClick">추가</button>
+            <label for="">이름</label><input v-model:value="name" />
+            <label for="">전화번호</label><input v-model:value="tel" />
+            <label for="">주소</label><input v-model:value="address" />
 
-        <button v-on:click='btnAddClick'>추가</button>
-        <label for="">이름</label><input v-model:value="name">
-        <label for="">전화번호</label><input v-model:value="tel">
-        <label for="">주소</label><input v-model:value="address">
-
-        <table id="list" class="table-bordered">
-            <thead>
-                <tr class="bg-warning text-white text-center">
-                    <th>번호</th>
-                    <th>이름</th>
-                    <th>전화번호</th>
-                    <th>주소</th>
-                </tr>
-            </thead>
-            <tbody id="contacts">
-                <tr v-for="(contact, i) in contacts" v-bind:key="i">
-                    <td>{{i+1}}</td>
-                    <td>{{contact.name}}</td>
-                    <td>{{contact.tel}}</td>
-                    <td>{{contact.address}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</body>
-
+            <table id="list" class="table-bordered">
+                <thead>
+                    <tr class="bg-warning text-white text-center">
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>전화번호</th>
+                        <th>주소</th>
+                    </tr>
+                </thead>
+                <tbody id="contacts">
+                    <tr v-for="(contact, i) in contacts" v-bind:key="i">
+                        <td>{{i+1}}</td>
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.tel}}</td>
+                        <td>{{contact.address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </html>
 
 <!-- vue template -->
 
+<!-- vue 플러그인 임포트   -->
 
 <!-- vue 플러그인 임포트   -->
+<script src="https://unpkg.com/vue@2.7.8/dist/vue.js">
+    /* vue 플러그인 임포트 */
+</script>
+<script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js">
+    /* vuex 플러그인 임포트 */
+</script>
+<script src="https://unpkg.com/vue-router@3.5.4/dist/vue-router.js">
+    /* vue 라우터 플러그인 임포트 */
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js">
+    /* axios 플러그인 임포트 */
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    /* jQuery 플러그인 임포트 */
+</script>
+<script>
+        new Vue({
+            /* edtmc^2w */
+            el: '#app',
+            data: {
+                contacts: [
+                    { name: 'ss', tel: 'aa', address: 'dd' },
+                    { name: '3456', tel: '6543', address: '서현' },
+                    { name: '5678', tel: '8765', address: '서리' }
+                ],
+                name: '데이터',
+                tel: '데이터',
+                address: '데이터'
+            },
+            //template: ``,
+            methods: {
+                btnAddClick() {
+                    console.log(event.target);
+
+                    console.log(
+                        this.$data.name,
+                        this.$data.tel,
+                        this.$data.address
+                    );
+                    const obj = {
+                        name: this.$data.name,
+                        tel: this.$data.tel,
+                        address: this.$data.address
+                    };
+
+                    this.$set( this.$data.contacts, this.$data.contacts.length+'', obj);
+                }
+            }
+        });
+</script>
