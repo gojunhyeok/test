@@ -105,3 +105,78 @@
 </html>
 
 <!-- vue 플러그인 임포트   -->
+
+<!-- vue 플러그인 임포트   -->
+<script src="https://unpkg.com/vue@2.7.8/dist/vue.js">/* vue 플러그인 임포트 */</script>
+<script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"> /* vuex 플러그인 임포트 */</script>
+<script src="https://unpkg.com/vue-router@3.5.4/dist/vue-router.js"> /* vue 라우터 플러그인 임포트 */</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"> /* axios 플러그인 임포트 */</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> /* jQuery 플러그인 임포트 */</script>
+<script>
+new Vue({
+    /* edtmc^2w */
+    el: '#app1',
+    data: {
+        awesome: true,
+    },
+});
+
+new Vue({
+    /* edtmc^2w */
+    el: '#app2',
+    data: {
+        awesome: false,
+    },
+});
+
+new Vue({
+    /* edtmc^2w */
+    el: '#app3',
+    data: {
+        awesome: false,
+    },
+    //template: ``,
+    methods: {
+        /* 이벤트 핸들러 등록 + 일반 함수 */
+        clickBind() {
+            if( this.$data.awesome === false){
+                this.$set( this.$data, 'awesome' , true);
+            }
+            else { /// this.$data.awesome === true
+                this.$set( this.$data, 'awesome', false);
+
+            }
+        }
+    },
+
+})
+new Vue({
+    /* edtmc^2w */
+    el: '#app4',
+    data: {
+        type: 0,
+        }
+
+    },
+    methods: {
+        clickbind(){
+            this.$date.type= (this.$data.type + 1) % 4
+            if(type === 1){
+                type = 2;
+            }
+            else if(type === 2){
+                type = 3;
+            }
+            else if(type ===3){
+                type = 0;
+            }
+            else {
+                type = 1;
+            }
+        }
+
+    },
+
+);
+
+</script>

@@ -1,27 +1,19 @@
 {
-  "name": "ls",
+  "name": "es2015test",
   "version": "1.0.0",
-  "description": "$ npm install --save-dev nodemon",
-  "main": "npm install --save-dev @babel/core",
-  "scripts": {            "build": "npx babel src/ -d build/"  /* <===== 추가 */
-    "test": "npm install --save-dev @babel/core"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src/ -d build/",
+    "start": "nodemon --watch src/ --exec npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "npm install --save-dev @babel/core"
-  },
-  "keywords": [
-    "npm",
-    "install",
-    "--save-dev",
-    "@babel/core"
-  ],
-  "author": "npm install --save-dev @babel/core",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "nodemon": "^2.0.19"
+    "@babel/cli": "7.18.10",
+    "@babel/core": "7.18.10",
+    "@babel/preset-env": "7.18.10",
+    "nodemon": "2.0.19"
   }
 }
