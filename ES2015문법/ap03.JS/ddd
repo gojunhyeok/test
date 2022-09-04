@@ -1,0 +1,10 @@
+<script>
+let qwqw = 'asdf'
+let wqwq = 'afdwdfwdf'
+let bmbm = 'dkanakf'
+let dksk = ''
+
+document.write(qwqw.length)
+document.write('<br />');
+
+</script>

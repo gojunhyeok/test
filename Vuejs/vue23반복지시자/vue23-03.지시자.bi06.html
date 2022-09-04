@@ -103,32 +103,32 @@
             el: '#app',
             data: {
                 contacts: [
-                    { name: 'ss', tel: 'aa', address: 'dd' },
-                    { name: '3456', tel: '6543', address: '서현' },
-                    { name: '5678', tel: '8765', address: '서리' }
+                    { name: '이름', tel: '101112', address: '주소1' },
+                    { name: '이름2', tel: '6543', address: '주소2' },
+                    { name: '이름3', tel: '8765', address: '주소3' }
                 ],
-                name: '데이터',
-                tel: '데이터',
-                address: '데이터'
-            },
+                name: '이름09',
+                tel: '전화번호09',
+                address: '주소09'
+            }
             //template: ``,
             methods: {
-                btnAddClick() {
-                    console.log(event.target);
+                 btnAddClick() {
+      console.log(event.target);
 
-                    console.log(
-                        this.$data.name,
-                        this.$data.tel,
-                        this.$data.address
-                    );
-                    const obj = {
-                        name: this.$data.name,
-                        tel: this.$data.tel,
-                        address: this.$data.address
-                    };
+      console.log(
+          this.$data.name,
+          this.$data.tel,
+          this.$data.address
+      );
+      const obj = {
+          name: this.$data.name,
+          tel: this.$data.tel,
+          address: this.$data.address
+      };
 
-                    this.$set( this.$data.contacts, this.$data.contacts.length+'', obj);
-                }
-            }
-        });
+      this.$set( this.$data.contacts, this.$data.contacts.length+'', obj);
+  }
+}
+});
 </script>

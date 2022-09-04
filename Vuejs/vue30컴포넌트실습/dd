@@ -1,0 +1,20 @@
+methods: {
+  btnAddClick() {
+      console.log(event.target);
+
+      console.log(
+          this.$data.name,
+          this.$data.tel,
+          this.$data.address
+      );
+      const obj = {
+          name: this.$data.name,
+          tel: this.$data.tel,
+          address: this.$data.address
+      };
+
+      this.$set( this.$data.contacts, this.$data.contacts.length+'', obj);
+  }
+}
+});
+</script>
