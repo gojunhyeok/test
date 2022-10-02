@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>counter</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <!-- CSS import -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css" />
     <style>
-        .component-parent {
-            width: 50%;
-            background-color: lightblue;
-            padding: 5%;
-        }
+      .component-parent {
+        width: 50%;
+        background-color: lightblue;
+        padding: 5%;
+      }
 
-        .component-child {
-            width: 80%;
-            background-color: lightgray;
-            padding: 5% 5% 10% 0;
-        }
-
+      .component-child {
+        width: 80%;
+        background-color: lightgray;
+        padding: 5% 5% 10% 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <img src="../images/vue-sample-counter.png" alt="" srcset="">
+  <body>
+    <img src="../images/vue-sample-counter.png" alt="" srcset="" />
     <xmp>
 
         props 와 이벤트를 사용하예 아래 예제를 작성한다.
@@ -79,20 +77,19 @@
         </div>
 
     </xmp>
-    <hr>
+    <hr />
 
     <div id="app" class="component-parent">
-        Parent counter : {counter} <br />
-        <button name="parent" onClick="handlerAddCounter">+</button>
-        <button name="parent" onClick="handlerSubCounter">-</button>
-        <p></p>
+      Parent counter : {counter} <br />
+      <button name="parent" onClick="handlerAddCounter">+</button>
+      <button name="parent" onClick="handlerSubCounter">-</button>
+      <p></p>
 
-        <div class="component-child">
-            Child counter : {props.counter} <br />
-            <button name="child" onClick="handlerAddCounter">+</button>
-            <button name="child" onClick="handlerSubCounter">-</button>
-        </div>
+      <div class="component-child">
+        Child counter : {props.counter} <br />
+        <button name="child" onClick="handlerAddCounter">+</button>
+        <button name="child" onClick="handlerSubCounter">-</button>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

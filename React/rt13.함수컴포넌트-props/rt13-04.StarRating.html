@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>02 - 별점 평가 컴포넌트</title>
     <style>
-        html, body, #app{
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+      html,
+      body,
+      #app {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-        #app{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      #app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .star-rating {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+      .star-rating {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
 
-        .star {
-            cursor: pointer;
-            width: 2em;
-            height: 2em;
-            background-color: grey;
-            -webkit-clip-path:
-                polygon(50% 0%, 63% 38%, 100% 38%,
-                69% 59%, 82% 100%, 50% 75%,
-                18% 100%, 31% 59%, 0% 38%, 37% 38%);
-            clip-path: polygon(50% 0%, 63% 38%,
-                100% 38%, 69% 59%, 82% 100%,
-                50% 75%, 18% 100%, 31% 59%,
-                0% 38%, 37% 38%);
-        }
+      .star {
+        cursor: pointer;
+        width: 2em;
+        height: 2em;
+        background-color: grey;
+        -webkit-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+        clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+      }
 
-        .star.selected {
-            background-color: red;
-        }
+      .star.selected {
+        background-color: red;
+      }
 
-        p {
-            flex-basis: 100%;
-            text-align: center;
-        }
+      p {
+        flex-basis: 100%;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         5점 만점의 별점 시스템을 만들어 본다.
         교제 144~153 페이지 참조
@@ -56,5 +53,5 @@
     </pre>
     <hr />
     <div id="app"></div>
-</body>
+  </body>
 </html>

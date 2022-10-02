@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="../css/reset.css" />
 
     <style>
-        #parent {
-            background-color: lightblue;
-            padding: 50px;
-        }
+      #parent {
+        background-color: lightblue;
+        padding: 50px;
+      }
 
-        #child {
-            background-color: lightcoral;
-            margin: 50px;
-            padding: 20px;
-        }
+      #child {
+        background-color: lightcoral;
+        margin: 50px;
+        padding: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <pre>
 
     자식 -> 부모 데이터 전달하는 예제를 작성한다.
@@ -44,27 +44,20 @@
     https://maxlibin.com/react-call-parent-function-on-es6/
 
     </pre>
-    <hr>
+    <hr />
 
     <div id="app">
-        <div id="parent">
-            I am a parent
+      <div id="parent">
+        I am a parent
 
-            <div id="child">
-                4
-                <br/>
-                I am a child
-                <br/>
-                <button onClick="handlerParentToggleFromChild">
-                    toggle
-                </button>
-            </div>
+        <div id="child">
+          4
+          <br />
+          I am a child
+          <br />
+          <button onClick="handlerParentToggleFromChild">toggle</button>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
-
-
-
-
-

@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
     <!-- CSS import -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css" />
 
     <style>
-        span {
-            font-size: 3em;
-        }
+      span {
+        font-size: 3em;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-    <div style="margin: 40px 0 20px 15px;">
-        <a href="#" onClick="window.open('../rt01.docs/불변성.pdf','npm사용법','width=800,height=400,toolbar=no,menubar=no,scrollbars=no,resizable=yes');return false;" rel="nofollow">5분 동안 교제 64~67, "3.3.1 불변성" 읽기</a>
-        <br>
-        <br>
-        <a href="#" onClick="window.open('../rt01.docs/데이터변환-복제후할당.pdf','npm사용법','width=800,height=400,toolbar=no,menubar=no,scrollbars=no,resizable=yes');return false;" rel="nofollow">5분 동안 교제 71~79, "3.3.3 데이터 변환" 읽기</a>
+  <body>
+    <div style="margin: 40px 0 20px 15px">
+      <a
+        href="#"
+        onClick="window.open('../rt01.docs/불변성.pdf','npm사용법','width=800,height=400,toolbar=no,menubar=no,scrollbars=no,resizable=yes');return false;"
+        rel="nofollow"
+        >5분 동안 교제 64~67, "3.3.1 불변성" 읽기</a
+      >
+      <br />
+      <br />
+      <a
+        href="#"
+        onClick="window.open('../rt01.docs/데이터변환-복제후할당.pdf','npm사용법','width=800,height=400,toolbar=no,menubar=no,scrollbars=no,resizable=yes');return false;"
+        rel="nofollow"
+        >5분 동안 교제 71~79, "3.3.3 데이터 변환" 읽기</a
+      >
     </div>
 
-    <xmp>
+    <xmp
+>
 
 컴포넌트의 상태(변수) 값을 변경하려면 복제 후 재할당으로 처리해야 한다.
 
@@ -64,23 +73,16 @@ const [arr, setArr] = useState([1, 2, 3, 4, 5]);
     (4) [500, 3, 4, 5, 70]      <== 방법4을 적용
 
     </xmp>
-    <hr>
+    <hr />
     <div id="app">
-        <div>
-            {arr.map( (value,index)=>(<span key={index}> {value} </span>))}
-            <br />
-            <button onClick={handlerChange1}>방법1로 변경</button>
-            <button onClick={handlerChange2}>방법2로 변경</button>
-            <button onClick={handlerChange3}>방법3로 변경</button>
-            <button onClick={handlerChange4}>방법4로 변경</button>
-        </div>
+      <div>
+        {arr.map( (value,index)=>(<span key="{index}"> {value} </span>))}
+        <br />
+        <button onClick="{handlerChange1}">방법1로 변경</button>
+        <button onClick="{handlerChange2}">방법2로 변경</button>
+        <button onClick="{handlerChange3}">방법3로 변경</button>
+        <button onClick="{handlerChange4}">방법4로 변경</button>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
-
-
-
-
-
-
